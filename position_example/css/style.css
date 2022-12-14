@@ -1,0 +1,46 @@
+.post{
+    height: 300px;
+    width: 300px;
+    background-color: #ccc;
+    font-size: 48px;
+}
+/* 依照原本位置做定位 : relative */
+.relative{
+    background-color: #fdd2b5;
+    position: relative;
+    top: 100px;
+    left: 100px;
+    z-index: 1;
+}
+/* 預設設定 */
+/*
+ z-index 規則
+1. 後寫元素會在上層
+2. 定位元素會比非定位元素(static)高
+3. 同為定位元素可設定z-index
+*/
+.static{
+    background-color: #acdbc9;
+    position: relative;
+    /* top: 100px; static 並不會對任何定位產生作用 */
+    z-index: 2;
+}
+/* Absolute絕對定位 : 依(上層)父層可做為參考的元素 */
+.absolute{
+    background-color: #f7a7a6;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.outter{
+    width: 500px;
+    height: 500px;
+    border: 5px solid #000;
+    position: relative;
+}
+.fixed{
+    position: fixed;
+    background-color: #f48b94;
+    right: 0;
+    bottom: 0;
+}
